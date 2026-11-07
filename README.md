@@ -1,6 +1,14 @@
 # django_practice
 practicing Django
 
+## Deploy
+```aiignore
+python manage.py migrate && python -m gunicorn config.asgi:application -k uvicorn_worker.UvicornWorker --bind 0.0.0.0:10000
+```
+
+## create super user
+```python manage.py createsuperuser ```
+
 ## Image endpoint
 
 Start Django with `python manage.py runserver`, then open
