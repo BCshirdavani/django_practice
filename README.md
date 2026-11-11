@@ -32,3 +32,13 @@ the `/api` prefix, you can use `/api/imagetest/` as the image URL as well.
 
 To serve your own PNG or JPEG, replace the image path, filename, and content type
 in `core/views.py` (for example, `image/png` for a `.png` file).
+
+## Run locally:
+
+With Python 3.12 installed, run these commands from the project directory:
+
+1. Create a virtual environment (first time only): `python3.12 -m venv .venv`
+2. Activate it (each new terminal session): `source .venv/bin/activate`
+3. Install dependencies: `python -m pip install -r requirements.txt`
+4. Run migrations: `python manage.py migrate`
+5. Start the server: `python manage.py runserver`
