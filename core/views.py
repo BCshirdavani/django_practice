@@ -15,7 +15,7 @@ def home(request):
 def image_list(request):
     return JsonResponse({
         "images": [
-            {"id": image_id, "name": image["name"]}
+            {"id": image_id, "name": image["name"], "label": image["label"]}
             for image_id, image in IMAGES.items()
         ]
     })
